@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.productButton1 = new Project_Inventory_Management_System.ProductButton();
+            this.btnProduct = new Project_Inventory_Management_System.ProductButton();
             this.productButton2 = new Project_Inventory_Management_System.ProductButton();
             this.productButton3 = new Project_Inventory_Management_System.ProductButton();
             this.productButton4 = new Project_Inventory_Management_System.ProductButton();
@@ -43,7 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productButton4)).BeginInit();
@@ -82,19 +82,19 @@
             this.panel2.Size = new System.Drawing.Size(814, 30);
             this.panel2.TabIndex = 1;
             // 
-            // productButton1
+            // btnProduct
             // 
-            this.productButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.productButton1.Image = ((System.Drawing.Image)(resources.GetObject("productButton1.Image")));
-            this.productButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("productButton1.ImageHover")));
-            this.productButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("productButton1.ImageNormal")));
-            this.productButton1.Location = new System.Drawing.Point(52, 163);
-            this.productButton1.Name = "productButton1";
-            this.productButton1.Size = new System.Drawing.Size(110, 120);
-            this.productButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.productButton1.TabIndex = 2;
-            this.productButton1.TabStop = false;
-            this.productButton1.Click += new System.EventHandler(this.productButton1_Click);
+            this.btnProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnProduct.ImageHover")));
+            this.btnProduct.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnProduct.ImageNormal")));
+            this.btnProduct.Location = new System.Drawing.Point(52, 163);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(110, 120);
+            this.btnProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnProduct.TabIndex = 2;
+            this.btnProduct.TabStop = false;
+            this.btnProduct.Click += new System.EventHandler(this.productButton1_Click);
             // 
             // productButton2
             // 
@@ -217,7 +217,7 @@
             this.Controls.Add(this.productButton4);
             this.Controls.Add(this.productButton3);
             this.Controls.Add(this.productButton2);
-            this.Controls.Add(this.productButton1);
+            this.Controls.Add(this.btnProduct);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MainPage";
@@ -225,7 +225,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productButton4)).EndInit();
@@ -240,7 +240,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private ProductButton productButton1;
+        private ProductButton btnProduct;
         private ProductButton productButton2;
         private ProductButton productButton3;
         private ProductButton productButton4;

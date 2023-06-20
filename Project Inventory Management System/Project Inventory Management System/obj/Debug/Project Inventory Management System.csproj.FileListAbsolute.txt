@@ -25,3 +25,4 @@ C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Manage
 C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.exe
 C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.pdb
 C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.UserForm.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.UserModuleForm.resources
