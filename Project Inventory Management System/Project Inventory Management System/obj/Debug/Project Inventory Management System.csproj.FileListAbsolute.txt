@@ -11,3 +11,17 @@ E:\Royal University of Phnom Penh\Year3\.Net Programming\Project Inventory Manag
 E:\Royal University of Phnom Penh\Year3\.Net Programming\Project Inventory Management System\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.pdb
 E:\Royal University of Phnom Penh\Year3\.Net Programming\Project Inventory Management System\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.MainPage.resources
 E:\Royal University of Phnom Penh\Year3\.Net Programming\Project Inventory Management System\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.ProductButton.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\bin\Debug\Project Inventory Management System.exe.config
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\bin\Debug\Project Inventory Management System.exe
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\bin\Debug\Project Inventory Management System.pdb
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.csproj.AssemblyReference.cache
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.csproj.SuggestedBindingRedirects.cache
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.MainPage.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.LoginForm.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.ProductButton.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.Properties.Resources.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.csproj.GenerateResource.cache
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.csproj.CoreCompileInputs.cache
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.exe
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.pdb
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.UserForm.resources
