@@ -33,8 +33,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.productButton1 = new Project_Inventory_Management_System.ProductButton();
+            this.productButton2 = new Project_Inventory_Management_System.ProductButton();
+            this.productButton3 = new Project_Inventory_Management_System.ProductButton();
+            this.productButton4 = new Project_Inventory_Management_System.ProductButton();
+            this.productButton5 = new Project_Inventory_Management_System.ProductButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,13 +88,119 @@
             this.productButton1.Image = ((System.Drawing.Image)(resources.GetObject("productButton1.Image")));
             this.productButton1.ImageHover = ((System.Drawing.Image)(resources.GetObject("productButton1.ImageHover")));
             this.productButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("productButton1.ImageNormal")));
-            this.productButton1.Location = new System.Drawing.Point(54, 165);
+            this.productButton1.Location = new System.Drawing.Point(52, 163);
             this.productButton1.Name = "productButton1";
-            this.productButton1.Size = new System.Drawing.Size(131, 143);
+            this.productButton1.Size = new System.Drawing.Size(110, 120);
             this.productButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productButton1.TabIndex = 2;
             this.productButton1.TabStop = false;
             this.productButton1.Click += new System.EventHandler(this.productButton1_Click);
+            // 
+            // productButton2
+            // 
+            this.productButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productButton2.Image = ((System.Drawing.Image)(resources.GetObject("productButton2.Image")));
+            this.productButton2.ImageHover = ((System.Drawing.Image)(resources.GetObject("productButton2.ImageHover")));
+            this.productButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("productButton2.ImageNormal")));
+            this.productButton2.Location = new System.Drawing.Point(206, 163);
+            this.productButton2.Name = "productButton2";
+            this.productButton2.Size = new System.Drawing.Size(110, 120);
+            this.productButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productButton2.TabIndex = 2;
+            this.productButton2.TabStop = false;
+            this.productButton2.Click += new System.EventHandler(this.productButton1_Click);
+            // 
+            // productButton3
+            // 
+            this.productButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productButton3.Image = ((System.Drawing.Image)(resources.GetObject("productButton3.Image")));
+            this.productButton3.ImageHover = ((System.Drawing.Image)(resources.GetObject("productButton3.ImageHover")));
+            this.productButton3.ImageNormal = ((System.Drawing.Image)(resources.GetObject("productButton3.ImageNormal")));
+            this.productButton3.Location = new System.Drawing.Point(360, 163);
+            this.productButton3.Name = "productButton3";
+            this.productButton3.Size = new System.Drawing.Size(110, 120);
+            this.productButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productButton3.TabIndex = 2;
+            this.productButton3.TabStop = false;
+            this.productButton3.Click += new System.EventHandler(this.productButton1_Click);
+            // 
+            // productButton4
+            // 
+            this.productButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productButton4.Image = ((System.Drawing.Image)(resources.GetObject("productButton4.Image")));
+            this.productButton4.ImageHover = ((System.Drawing.Image)(resources.GetObject("productButton4.ImageHover")));
+            this.productButton4.ImageNormal = ((System.Drawing.Image)(resources.GetObject("productButton4.ImageNormal")));
+            this.productButton4.Location = new System.Drawing.Point(509, 163);
+            this.productButton4.Name = "productButton4";
+            this.productButton4.Size = new System.Drawing.Size(110, 120);
+            this.productButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productButton4.TabIndex = 2;
+            this.productButton4.TabStop = false;
+            this.productButton4.Click += new System.EventHandler(this.productButton1_Click);
+            // 
+            // productButton5
+            // 
+            this.productButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productButton5.Image = ((System.Drawing.Image)(resources.GetObject("productButton5.Image")));
+            this.productButton5.ImageHover = ((System.Drawing.Image)(resources.GetObject("productButton5.ImageHover")));
+            this.productButton5.ImageNormal = ((System.Drawing.Image)(resources.GetObject("productButton5.ImageNormal")));
+            this.productButton5.Location = new System.Drawing.Point(653, 163);
+            this.productButton5.Name = "productButton5";
+            this.productButton5.Size = new System.Drawing.Size(110, 120);
+            this.productButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productButton5.TabIndex = 2;
+            this.productButton5.TabStop = false;
+            this.productButton5.Click += new System.EventHandler(this.productButton1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(58, 295);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "PRODUCTS";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(207, 295);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "CUSTOMERS";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(360, 295);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 18);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "CATEGORIES";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(526, 295);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "ORDERS";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(677, 295);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 18);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "USERS";
             // 
             // MainPage
             // 
@@ -89,6 +208,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(814, 445);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.productButton5);
+            this.Controls.Add(this.productButton4);
+            this.Controls.Add(this.productButton3);
+            this.Controls.Add(this.productButton2);
             this.Controls.Add(this.productButton1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -98,7 +226,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productButton5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +241,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private ProductButton productButton1;
+        private ProductButton productButton2;
+        private ProductButton productButton3;
+        private ProductButton productButton4;
+        private ProductButton productButton5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
