@@ -41,13 +41,7 @@ namespace Project_Inventory_Management_System
         {
 
         }
-
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvuser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
