@@ -21,7 +21,7 @@ namespace Project_Inventory_Management_System
         private void openChildForm(Form childForm)
         {
             if (childForm != null)
-            activeForm.Close();
+            activeForm?.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
