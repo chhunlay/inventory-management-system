@@ -34,7 +34,21 @@ namespace Project_Inventory_Management_System
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            openChildForm(new UserForm());
+            UserForm userForm = new UserForm();
+            userForm.BringToFront();
+            userForm.ShowDialog();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.BringToFront();
+            customerForm.ShowDialog();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Project_Inventory_Management_System
         {
             try
             {
-                if (txtConfirmedPassword.Text != txtConfirmedPassword.Text)
+                if (txtConfirmedPassword.Text != txtPassword.Text)
                 {
                     MessageBox.Show("Password did not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -62,7 +62,7 @@ namespace Project_Inventory_Management_System
         {
             try
             {
-                if(txtConfirmedPassword.Text != txtConfirmedPassword.Text)
+                if(txtConfirmedPassword.Text != txtPassword.Text)
                 {
                     MessageBox.Show("Password did not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -90,6 +90,8 @@ namespace Project_Inventory_Management_System
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
         public void Clear()
         {

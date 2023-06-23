@@ -41,3 +41,5 @@ D:\M1 Y3 class\C# programming\inventory-management-system\Project Inventory Mana
 D:\M1 Y3 class\C# programming\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.csproj.CoreCompileInputs.cache
 D:\M1 Y3 class\C# programming\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.exe
 D:\M1 Y3 class\C# programming\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project Inventory Management System.pdb
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.CustomerForm.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.CustomerModuleForm.resources
