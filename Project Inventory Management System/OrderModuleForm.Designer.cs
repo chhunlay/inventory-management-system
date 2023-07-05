@@ -49,7 +49,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.orderDate = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -71,6 +71,7 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblOrderID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -102,6 +103,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblOrderID);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtCustomerName);
             this.panel2.Controls.Add(this.label6);
@@ -213,6 +215,7 @@
             this.dgvCustomer.RowHeadersWidth = 62;
             this.dgvCustomer.Size = new System.Drawing.Size(282, 183);
             this.dgvCustomer.TabIndex = 7;
+            this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
             // 
             // Column6
@@ -247,7 +250,7 @@
             this.panel3.Controls.Add(this.btnClear);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.orderDate);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.txtTotal);
@@ -274,7 +277,7 @@
             this.UDQTY.Location = new System.Drawing.Point(570, 328);
             this.UDQTY.Margin = new System.Windows.Forms.Padding(2);
             this.UDQTY.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
@@ -294,6 +297,7 @@
             this.btnClear.TabIndex = 38;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdate
             // 
@@ -307,6 +311,7 @@
             this.btnUpdate.TabIndex = 39;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -319,14 +324,17 @@
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Order";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dateTimePicker1
+            // orderDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(57, 463);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(181, 20);
-            this.dateTimePicker1.TabIndex = 37;
+            this.orderDate.CustomFormat = "dd/MM/yyyy";
+            this.orderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.orderDate.Location = new System.Drawing.Point(57, 463);
+            this.orderDate.Margin = new System.Windows.Forms.Padding(2);
+            this.orderDate.Name = "orderDate";
+            this.orderDate.Size = new System.Drawing.Size(181, 20);
+            this.orderDate.TabIndex = 37;
             // 
             // label13
             // 
@@ -488,7 +496,7 @@
             this.dgvProduct.RowHeadersWidth = 62;
             this.dgvProduct.Size = new System.Drawing.Size(771, 183);
             this.dgvProduct.TabIndex = 17;
-            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -552,6 +560,16 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 97;
             // 
+            // lblOrderID
+            // 
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Location = new System.Drawing.Point(12, 501);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(41, 13);
+            this.lblOrderID.TabIndex = 25;
+            this.lblOrderID.Text = "label14";
+            this.lblOrderID.Visible = false;
+            // 
             // OrderModuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,9 +605,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSearchCustomer;
         private System.Windows.Forms.Label label2;
@@ -603,21 +619,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtProductID;
-        private System.Windows.Forms.NumericUpDown UDQTY;
         public System.Windows.Forms.Button btnClear;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label lblOrderID;
+        public System.Windows.Forms.DateTimePicker orderDate;
+        public System.Windows.Forms.TextBox txtCustomerName;
+        public System.Windows.Forms.TextBox txtCustomerID;
+        public System.Windows.Forms.TextBox txtProductName;
+        public System.Windows.Forms.TextBox txtProductID;
+        public System.Windows.Forms.NumericUpDown UDQTY;
+        public System.Windows.Forms.TextBox txtPrice;
     }
 }
