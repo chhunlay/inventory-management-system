@@ -25,7 +25,7 @@ namespace Project_Inventory_Management_System
         {
             int i = 0;
             dgvuser.Rows.Clear();
-            cm = new SqlCommand("SELECT * FROM tbUser",con);
+            cm = new SqlCommand("SELECT * FROM tbUser WHERE CONCAT(username,phone) LIKE '%" + txtSearchUser.Text + "%'",con);
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
@@ -87,6 +87,11 @@ namespace Project_Inventory_Management_System
             userModule.btnSave.Enabled = true;
             userModule.btnUpdate.Enabled = false;
             userModule.ShowDialog();
+            LoadUser();
+        }
+
+        private void txtSearchUser_TextChanged(object sender, EventArgs e)
+        {
             LoadUser();
         }
     }

@@ -89,3 +89,8 @@ C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Manage
 C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\obj\Debug\Project Inventory Management System.csproj.CoreCompileInputs.cache
 C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\obj\Debug\Project Inventory Management System.exe
 C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\obj\Debug\Project Inventory Management System.pdb
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\obj\Debug\Project_Inventory_Management_System.WelcomForm.resources
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\bin\Debug\Project Inventory Management System.exe.manifest
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\bin\Debug\Project Inventory Management System.application
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\obj\Debug\Project Inventory Management System.exe.manifest
+C:\Users\Sev Thorth\Desktop\inventory-management-system\Project Inventory Management System\obj\Debug\Project Inventory Management System.application

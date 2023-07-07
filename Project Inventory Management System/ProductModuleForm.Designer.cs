@@ -113,28 +113,28 @@
             this.txtDescription.Location = new System.Drawing.Point(252, 221);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(389, 20);
-            this.txtDescription.TabIndex = 16;
+            this.txtDescription.TabIndex = 4;
             // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(252, 177);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(389, 20);
-            this.txtPrice.TabIndex = 15;
+            this.txtPrice.TabIndex = 3;
             // 
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(252, 133);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(389, 20);
-            this.txtQuantity.TabIndex = 11;
+            this.txtQuantity.TabIndex = 2;
             // 
             // txtProductName
             // 
             this.txtProductName.Location = new System.Drawing.Point(252, 89);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(389, 20);
-            this.txtProductName.TabIndex = 6;
+            this.txtProductName.TabIndex = 1;
             // 
             // label5
             // 
@@ -194,7 +194,7 @@
             this.comboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(389, 21);
-            this.comboCategory.TabIndex = 18;
+            this.comboCategory.TabIndex = 5;
             // 
             // lblProductID
             // 

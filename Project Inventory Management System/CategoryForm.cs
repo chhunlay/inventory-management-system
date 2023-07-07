@@ -25,7 +25,8 @@ namespace Project_Inventory_Management_System
         {
             int i = 0;
             dgvCategory.Rows.Clear();
-            cm = new SqlCommand("SELECT * FROM tbCategory", con);
+            cm = new SqlCommand("SELECT * FROM tbCategory WHERE CONCAT(categoryid,categoryname) LIKE '%" + txtSearchCategory.Text + "%'", con);
+
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
@@ -73,6 +74,10 @@ namespace Project_Inventory_Management_System
             }
             LoadCategory();
         }
-           
+
+        private void txtSearchCategory_TextChanged(object sender, EventArgs e)
+        {
+            LoadCategory();
         }
+    }
     }

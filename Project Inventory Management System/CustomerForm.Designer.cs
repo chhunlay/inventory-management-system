@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdd = new Project_Inventory_Management_System.ProductButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchCustomer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,19 +68,17 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1316, 138);
+            this.panel1.Size = new System.Drawing.Size(877, 90);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(522, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(348, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 62);
+            this.label1.Size = new System.Drawing.Size(214, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "CUSTOMER";
             // 
@@ -88,14 +86,13 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtSearchCustomer);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 743);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 444);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1316, 66);
+            this.panel2.Size = new System.Drawing.Size(877, 43);
             this.panel2.TabIndex = 3;
             // 
             // btnAdd
@@ -105,32 +102,30 @@
             this.btnAdd.ImageHover = null;
             this.btnAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageNormal")));
             this.btnAdd.InitialImage = null;
-            this.btnAdd.Location = new System.Drawing.Point(1242, 5);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(828, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(42, 49);
+            this.btnAdd.Size = new System.Drawing.Size(28, 32);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAdd.TabIndex = 3;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox1
+            // txtSearchCustomer
             // 
-            this.textBox1.Location = new System.Drawing.Point(170, 17);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(805, 26);
-            this.textBox1.TabIndex = 1;
+            this.txtSearchCustomer.Location = new System.Drawing.Point(113, 11);
+            this.txtSearchCustomer.Name = "txtSearchCustomer";
+            this.txtSearchCustomer.Size = new System.Drawing.Size(538, 20);
+            this.txtSearchCustomer.TabIndex = 1;
+            this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1176, 17);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(784, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 33);
+            this.label3.Size = new System.Drawing.Size(38, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Add";
             // 
@@ -139,10 +134,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(25, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 33);
+            this.label2.Size = new System.Drawing.Size(60, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Search";
             // 
@@ -153,7 +147,6 @@
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
             // 
             // Column2
             // 
@@ -163,7 +156,6 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 150;
             // 
             // Column3
             // 
@@ -180,7 +172,6 @@
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
             // 
             // Edit
             // 
@@ -191,7 +182,6 @@
             this.Edit.MinimumWidth = 8;
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
-            this.Edit.Width = 150;
             // 
             // Delete
             // 
@@ -202,7 +192,6 @@
             this.Delete.MinimumWidth = 8;
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
-            this.Delete.Width = 150;
             // 
             // dataGridViewImageColumn2
             // 
@@ -213,7 +202,6 @@
             this.dataGridViewImageColumn2.MinimumWidth = 8;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Width = 150;
             // 
             // dataGridViewImageColumn1
             // 
@@ -224,7 +212,6 @@
             this.dataGridViewImageColumn1.MinimumWidth = 8;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 150;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -233,7 +220,6 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 150;
             // 
             // Column5
             // 
@@ -251,7 +237,6 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -260,7 +245,6 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
             // dgvCustomer
             // 
@@ -283,12 +267,11 @@
             this.EditCustomer,
             this.DeleteCustomer});
             this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCustomer.Location = new System.Drawing.Point(0, 138);
-            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvCustomer.Location = new System.Drawing.Point(0, 90);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowHeadersWidth = 62;
-            this.dgvCustomer.Size = new System.Drawing.Size(1316, 605);
+            this.dgvCustomer.Size = new System.Drawing.Size(877, 354);
             this.dgvCustomer.TabIndex = 5;
             this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
             // 
@@ -299,7 +282,7 @@
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 81;
+            this.Column6.Width = 55;
             // 
             // Column7
             // 
@@ -308,7 +291,7 @@
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 177;
+            this.Column7.Width = 116;
             // 
             // Column8
             // 
@@ -325,7 +308,7 @@
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 119;
+            this.Column9.Width = 81;
             // 
             // EditCustomer
             // 
@@ -351,14 +334,13 @@
             // 
             // CustomerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 809);
+            this.ClientSize = new System.Drawing.Size(877, 487);
             this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerForm";
             this.Text = "CustomerForm";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
@@ -378,7 +360,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private ProductButton btnAdd;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchCustomer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

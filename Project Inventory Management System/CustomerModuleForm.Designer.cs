@@ -147,6 +147,7 @@
             this.lblCustomerID.Size = new System.Drawing.Size(91, 18);
             this.lblCustomerID.TabIndex = 15;
             this.lblCustomerID.Text = "CustomerID";
+            this.lblCustomerID.Visible = false;
             // 
             // CustomerModuleForm
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Project_Inventory_Management_System
 {
     public partial class MainPage : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Sev Thorth\Documents\dbMS.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlCommand cm = new SqlCommand();
         public MainPage()
         {
             InitializeComponent();
@@ -66,6 +69,16 @@ namespace Project_Inventory_Management_System
             productForm.BringToFront();
             productForm.ShowDialog();
 
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

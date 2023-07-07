@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Project_Inventory_Management_System
 {
@@ -37,9 +38,9 @@ namespace Project_Inventory_Management_System
             this.txt_username = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txt_password = new System.Windows.Forms.TextBox();
+            this.btnLoginForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,28 +118,11 @@ namespace Project_Inventory_Management_System
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Romnea", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(12, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(298, 39);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Btn_login);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.IndianRed;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,13 +145,32 @@ namespace Project_Inventory_Management_System
             this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnLoginForm
+            // 
+            this.btnLoginForm.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLoginForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoginForm.FlatAppearance.BorderSize = 0;
+            this.btnLoginForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginForm.Font = new System.Drawing.Font("Romnea", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginForm.ForeColor = System.Drawing.Color.White;
+            this.btnLoginForm.Location = new System.Drawing.Point(12, 330);
+            this.btnLoginForm.Name = "btnLoginForm";
+            this.btnLoginForm.Size = new System.Drawing.Size(298, 38);
+            this.btnLoginForm.TabIndex = 5;
+            this.btnLoginForm.Text = "Login";
+            this.btnLoginForm.UseVisualStyleBackColor = false;
+            this.btnLoginForm.Click += new System.EventHandler(this.btnLoginForm_Click);
+            // 
             // LoginForm
             // 
+            this.AcceptButton = this.btnLoginForm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(325, 453);
+            this.Controls.Add(this.btnLoginForm);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -194,10 +197,13 @@ namespace Project_Inventory_Management_System
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+
+        public Button Btn_login { get; private set; }
+
+        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txt_password;
-
+        private Button btnLoginForm;
     }
 }
 

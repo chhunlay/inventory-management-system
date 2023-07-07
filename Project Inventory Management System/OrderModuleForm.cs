@@ -66,7 +66,7 @@ namespace Project_Inventory_Management_System
                 return;
             }
 
-            int total = Convert.ToInt16(txtPrice.Text) * Convert.ToInt16(UDQTY.Value); 
+            int total = Convert.ToInt32(txtPrice.Text) * Convert.ToInt32(UDQTY.Value); 
             txtTotal.Text = total.ToString();
         }
 
@@ -80,7 +80,7 @@ namespace Project_Inventory_Management_System
             txtProductID.Text = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtProductName.Text = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtPrice.Text = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
-            product_qty = Convert.ToInt16(dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString());
+            product_qty = Convert.ToInt32(dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString());
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -133,7 +133,6 @@ namespace Project_Inventory_Management_System
         {
             Clear();
             btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
         }
         public void Clear()
         {
@@ -157,8 +156,7 @@ namespace Project_Inventory_Management_System
         {
 
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

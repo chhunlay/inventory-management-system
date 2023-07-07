@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdd = new Project_Inventory_Management_System.ProductButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchCategory = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -73,7 +73,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtSearchCategory);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -97,12 +97,13 @@
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox1
+            // txtSearchCategory
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(538, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtSearchCategory.Location = new System.Drawing.Point(113, 11);
+            this.txtSearchCategory.Name = "txtSearchCategory";
+            this.txtSearchCategory.Size = new System.Drawing.Size(538, 20);
+            this.txtSearchCategory.TabIndex = 1;
+            this.txtSearchCategory.TextChanged += new System.EventHandler(this.txtSearchCategory_TextChanged);
             // 
             // label3
             // 
@@ -371,7 +372,7 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 115;
+            this.dataGridViewTextBoxColumn5.Width = 106;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -432,7 +433,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private ProductButton btnAdd;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchCategory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

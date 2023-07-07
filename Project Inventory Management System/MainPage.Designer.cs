@@ -92,6 +92,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(829, 374);
             this.panelMain.TabIndex = 4;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // flowLayoutPanel1
             // 
@@ -173,6 +174,7 @@
             this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
             this.btnOrder.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnOrder.ImageHover")));
             this.btnOrder.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnOrder.ImageNormal")));
+            this.btnOrder.InitialImage = null;
             this.btnOrder.Location = new System.Drawing.Point(509, 96);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(110, 120);
@@ -187,6 +189,7 @@
             this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
             this.btnCategory.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnCategory.ImageHover")));
             this.btnCategory.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnCategory.ImageNormal")));
+            this.btnCategory.InitialImage = null;
             this.btnCategory.Location = new System.Drawing.Point(359, 96);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(110, 120);
@@ -236,6 +239,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "MainPage";
             this.Text = "Main Page";
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMain.ResumeLayout(false);

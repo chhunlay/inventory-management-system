@@ -23,18 +23,22 @@ namespace Project_Inventory_Management_System
         }
         public void LoadOrder()
         {
+            double total = 0;
             int i = 0;
             dgvorder.Rows.Clear();
-            cm = new SqlCommand("SELECT * FROM tbOrder", con);
+            cm = new SqlCommand("SELECT orderid,orderdate,O.product_id,P.product_name,O.customerid,C.customername,O.product_qty,P.product_price,total FROM tbOrder AS O JOIN tbCustomer AS C ON O.customerid=C.customerid JOIN tbProduct AS P ON O.product_id=P.product_id WHERE CONCAT(orderid,orderdate,O.product_id,P.product_name,O.customerid,C.customername,O.product_qty,P.product_price) LIKE '%"+txtSearchOrder.Text+"%'", con);
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
                 i++;
                 dgvorder.Rows.Add(i, dr[0].ToString(), Convert.ToDateTime(dr[1].ToString()).ToString("dd/MM/yyyy"), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
+                total += Convert.ToInt32(dr[8].ToString());
             }
             dr.Close();
             con.Close();
+            lblQTY.Text = i.ToString();
+            lblTotal.Text = total.ToString();
         }
 
         private void lblQTY_Click(object sender, EventArgs e)
@@ -45,24 +49,8 @@ namespace Project_Inventory_Management_System
         private void dgvorder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvorder.Columns[e.ColumnIndex].Name;
-             if (colName == "Edit")
-             {
-                /*   OrderModuleForm formModule = new OrderModuleForm();
-                  formModule.lblOrderID.Text = dgvorder.Rows[e.RowIndex].Cells[1].Value.ToString();
-                  formModule.orderDate.Text = dgvorder.Rows[e.RowIndex].Cells[2].Value.ToString();
-                  formModule.txtProductID.Text = dgvorder.Rows[e.RowIndex].Cells[3].Value.ToString();
-                  formModule.txtProductName.Text = dgvorder.Rows[e.RowIndex].Cells[4].Value.ToString();
-                  formModule.txtCustomerID.Text = dgvorder.Rows[e.RowIndex].Cells[5].Value.ToString();
-                  formModule.txtCustomerName.Text = dgvorder.Rows[e.RowIndex].Cells[6].Value.ToString();
-                  formModule.UDQTY.Value =Convert.ToInt32(dgvorder.Rows[e.RowIndex].Cells[7].Value.ToString());
-                  formModule.txtPrice.Text = dgvorder.Rows[e.RowIndex].Cells[8].Value.ToString();
-
-                  formModule.btnSave.Enabled = false;
-                  formModule.btnUpdate.Enabled = true;
-                  formModule.ShowDialog();*/
-            }
-            else if (colName == "Delete")
-             {
+            if (colName == "Delete")
+            {
                  if (MessageBox.Show("Are you sure you want to delete this Product?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                  {
                      con.Open();
@@ -70,8 +58,15 @@ namespace Project_Inventory_Management_System
                      cm.ExecuteNonQuery();
                      con.Close();
                      MessageBox.Show("Record has been successfully deleted!");
-                 }
-             }
+
+                    cm = new SqlCommand("UPDATE tbProduct SET product_qty=(product_qty+@product_qty) WHERE product_id LIKE '" + dgvorder.Rows[e.RowIndex].Cells[3].Value.ToString() + "'", con);
+                    cm.Parameters.AddWithValue("@product_qty", Convert.ToInt16(dgvorder.Rows[e.RowIndex].Cells[5].Value.ToString()));
+
+                    con.Open();
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
              LoadOrder();
          }
            
@@ -79,9 +74,18 @@ namespace Project_Inventory_Management_System
         {
             OrderModuleForm orderModuleForm = new OrderModuleForm();
             orderModuleForm.btnSave.Enabled = true;
-            orderModuleForm.btnUpdate.Enabled = false;
             orderModuleForm.ShowDialog();
             LoadOrder();
+        }
+
+        private void txtSearchOrder_TextChanged(object sender, EventArgs e)
+        {
+            LoadOrder();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

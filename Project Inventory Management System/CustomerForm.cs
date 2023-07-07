@@ -25,7 +25,7 @@ namespace Project_Inventory_Management_System
         {
             int i = 0;
             dgvCustomer.Rows.Clear();
-            cm = new SqlCommand("SELECT * FROM tbCustomer", con);
+            cm = new SqlCommand("SELECT * FROM tbCustomer WHERE CONCAT(customerid,customername,customerphone) LIKE '%" + txtSearchCustomer.Text + "%'", con);
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
@@ -78,6 +78,11 @@ namespace Project_Inventory_Management_System
                     MessageBox.Show("Record has been successfully deleted!");
                 }
             }
+            LoadCustomer();
+        }
+
+        private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
             LoadCustomer();
         }
     }

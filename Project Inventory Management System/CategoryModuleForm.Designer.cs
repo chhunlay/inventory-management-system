@@ -69,6 +69,7 @@
             this.lblCategoryID.Size = new System.Drawing.Size(87, 18);
             this.lblCategoryID.TabIndex = 24;
             this.lblCategoryID.Text = "CategoryID";
+            this.lblCategoryID.Visible = false;
             this.lblCategoryID.Click += new System.EventHandler(this.lblCustomerID_Click);
             // 
             // btnClear
@@ -140,7 +141,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CategoryModuleForm";
             this.Text = "CategoryModuleForm";
             this.Load += new System.EventHandler(this.CategoryModuleForm_Load);

@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdd = new Project_Inventory_Management_System.ProductButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvuser = new System.Windows.Forms.DataGridView();
@@ -80,7 +80,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtSearchUser);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -93,7 +93,7 @@
             // 
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageHover = null;
+            this.btnAdd.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageHover")));
             this.btnAdd.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageNormal")));
             this.btnAdd.InitialImage = null;
             this.btnAdd.Location = new System.Drawing.Point(821, 3);
@@ -104,19 +104,20 @@
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox1
+            // txtSearchUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(538, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtSearchUser.Location = new System.Drawing.Point(113, 11);
+            this.txtSearchUser.Name = "txtSearchUser";
+            this.txtSearchUser.Size = new System.Drawing.Size(538, 20);
+            this.txtSearchUser.TabIndex = 1;
+            this.txtSearchUser.TextChanged += new System.EventHandler(this.txtSearchUser_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(768, 11);
+            this.label3.Location = new System.Drawing.Point(767, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 23);
             this.label3.TabIndex = 0;
@@ -295,7 +296,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvuser;
         private ProductButton btnAdd;

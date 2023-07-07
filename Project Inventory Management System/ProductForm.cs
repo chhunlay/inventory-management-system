@@ -25,7 +25,7 @@ namespace Project_Inventory_Management_System
         {
             int i = 0;
             dgvProduct.Rows.Clear();
-            cm = new SqlCommand("SELECT * FROM tbProduct", con);
+            cm = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT (product_id,product_name,product_qty,product_price,product_description,product_category) LIKE '%" + txtSearchProduct.Text + "%'", con);
             con.Open();
             dr = cm.ExecuteReader();
             while (dr.Read())
@@ -74,6 +74,11 @@ namespace Project_Inventory_Management_System
             productform.btnSave.Enabled = true;
             productform.btnUpdate.Enabled = false;
             productform.ShowDialog();
+            LoadProduct();
+        }
+
+        private void txtSearchProduct_TextChanged(object sender, EventArgs e)
+        {
             LoadProduct();
         }
     }
