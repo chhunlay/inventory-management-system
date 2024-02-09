@@ -20,9 +20,32 @@ namespace Project_Inventory_Management_System
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (txtConfirmedPassword.Text != txtPassword.Text)
+                {
+                    MessageBox.Show("Password did not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (MessageBox.Show("Are you sure you want to update this user?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cm = new SqlCommand("UPDATE tbUser SET username=@username,password=@password,confirmedpassword=@confirmedpassword,phone=@phone WHERE username Like '"+txtUserName.Text+"'", con);
+                    cm.Parameters.AddWithValue("@password", txtPassword.Text);
+                    cm.Parameters.AddWithValue("@confirmedpassword", txtConfirmedPassword.Text);
+                    cm.Parameters.AddWithValue("@phone", txtPhoneNumber.Text);
+                    con.Open();
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User has been successfully updated.");
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -39,6 +62,11 @@ namespace Project_Inventory_Management_System
         {
             try
             {
+                if(txtConfirmedPassword.Text != txtPassword.Text)
+                {
+                    MessageBox.Show("Password did not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 if (MessageBox.Show("Are you sure you want to save this user?","Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cm = new SqlCommand("INSERT INTO tbUser(username,password,confirmedpassword,phone)VALUES(@username,@password,@confirmedpassword,@phone)", con);
@@ -62,6 +90,8 @@ namespace Project_Inventory_Management_System
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
         public void Clear()
         {

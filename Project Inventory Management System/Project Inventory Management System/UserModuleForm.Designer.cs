@@ -159,7 +159,8 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.button2_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+
             // 
             // btnClear
             // 
@@ -192,6 +193,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "UserModuleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserModuleForm";
             this.Load += new System.EventHandler(this.UserModuleForm_Load);
             this.panel1.ResumeLayout(false);
@@ -209,12 +211,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtConfirmedPassword;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.TextBox txtUserName;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtConfirmedPassword;
+        public System.Windows.Forms.TextBox txtPhoneNumber;
     }
 }
