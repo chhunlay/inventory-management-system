@@ -17,22 +17,36 @@ namespace Project_Inventory_Management_System
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
-
+            if (childForm != null)
+            activeForm?.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnUser_Click(object sender, EventArgs e)
         {
-
+            UserForm userForm = new UserForm();
+            userForm.BringToFront();
+            userForm.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCustomer_Click(object sender, EventArgs e)
         {
-
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.BringToFront();
+            customerForm.ShowDialog();
         }
 
-        private void productButton1_Click(object sender, EventArgs e)
+        private void btnOrder_Click(object sender, EventArgs e)
         {
 
         }
